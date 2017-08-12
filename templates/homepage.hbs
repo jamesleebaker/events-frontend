@@ -1,9 +1,13 @@
 <section id="homepage">
-  {{> components/homepage/featured-events }}
+  <div class="content-container">
+    {{> components/homepage/featured-events }}
 
-  <section class="events">
-    {{> components/homepage/homepage-events-time-filters }}
-    {{> components/homepage/homepage-events-list }}
-    {{> components/homepage/homepage-events-filters }}
-  </section>
+    <section class="homepage-events">
+      <div class="events-container">
+        {{> components/homepage/homepage-events-time-filters }}
+        {{> components/homepage/homepage-events-list }}
+      </div>
+      {{> components/homepage/homepage-events-filters }}
+    </section>
+  </div>
 </section>

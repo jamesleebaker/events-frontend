@@ -1,0 +1,45 @@
+body {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
+}
+
+a:link, a:visited {
+  color: #2ea2f8;
+  text-decoration: none;
+}
+
+a:hover, a:active {
+  color: #2985c9;
+}
+
+h1 {
+  font-size: 1.8em;
+  color: $header-color;
+  font-weight: 500;
+}
+
+h2 {
+  font-size: 1.6em;
+  color: $header-color;
+}
+
+h3 {
+  font-size: 1.4em;
+  color: $header-color;
+}
+
+h4 {
+  font-size: 1.3em;
+  color: $header-color;
+}
+
+h5 {
+  font-size: 1.2em;
+  color: $header-color;
+}
+
+h6 {
+  font-size: .8em;
+  font-weight: bold;
+  text-transform: uppercase;
+}

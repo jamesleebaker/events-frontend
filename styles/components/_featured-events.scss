@@ -1,7 +1,0 @@
-.featured-events {
-  @include grid-row();
-
-  .featured-event {
-    @include grid-column(4);
-  }
-}

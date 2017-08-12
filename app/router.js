@@ -10,7 +10,7 @@ import errorTemplate from '../templates/error.hbs';
 const RENDER_ERROR = 'Unable to render page';
 
 const clearDOM = () => {
-  const container = document.querySelector('#app-container');
+  const container = document.querySelector('#page-container');
   container.innerHTML = '';
 }
 
@@ -47,7 +47,7 @@ router('/', (context) => {
       });
     }
 
-    document.querySelector('#app-container').innerHTML = html;
+    document.querySelector('#page-container').innerHTML = html;
   });
 });
 
@@ -66,7 +66,7 @@ router('/event/:eventId', (context) => {
       });
     }
 
-    document.querySelector('#app-container').innerHTML = html;
+    document.querySelector('#page-container').innerHTML = html;
   });
 });
 

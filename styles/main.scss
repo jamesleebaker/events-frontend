@@ -1,15 +1,30 @@
 @import 'reset';
 @import 'grid';
 @import 'variables';
+@import 'mixins';
+@import 'typography';
 
 // Components
-@import 'components/featured-events';
-@import 'components/homepage-events-filters';
-@import 'components/homepage-events-list';
 @import 'components/site-footer';
 @import 'components/site-navigation';
 
-.holyshit {
-  color: red;
-  font-weight: bold;
+@import 'components/homepage';
+
+body {
+  background-color: $body-bg-color;
+  color: $body-text-color;
+  text-align: center;
+}
+
+.content-container {
+  width: 1280px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.site-footer {
+  background-color: #1b2431;
+  // temp
+  min-height: 300px;
+  padding: 20px;
 }

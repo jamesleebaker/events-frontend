@@ -1,12 +1,35 @@
 #site-nav {
-  @include grid-row();
+  background-color: #fff;
+  border-bottom: 1px solid #dfe2e5;
+  height: 60px;
+  line-height: 60px;
 
-  .page-title,
-  .menu-items {
-    @include grid-column(8);
-  }
+  .content-container {
+    @include grid-row();
+    margin: 0 auto;
 
-  .menu-items li {
-    display: inline-block;
+    .page-title,
+    .menu-actions {
+      @include grid-column(8);
+    }
+
+    .page-title a {
+      @include no-link($header-color);
+    }
+
+    .menu-actions {
+      text-align: right;
+      display: inline-block;
+    }
+
+    .menu-actions li {
+      display: inline-block;
+    }
+
+    .submit-event-button {
+      @include primary-button();
+      display: inline;
+      color: white;
+    }
   }
 }
