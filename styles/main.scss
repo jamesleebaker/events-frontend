@@ -1,9 +1,2 @@
-@import "./css/normalize.css";
-@import "./css/font-awesome.min.css";
-@import "./css/styles.css";
-
-body {
-  p {
-  	color: green;
-  }
-}
+@import 'reset';
+@import 'variables';
