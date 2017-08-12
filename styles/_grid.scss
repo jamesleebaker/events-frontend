@@ -1,0 +1,64 @@
+$grid-columns: 16 !default;
+$grid-gutter: 0.5rem !default;
+$grid-breakpoints: (768px, 992px, 1200px) !default;
+
+/**
+ * Calculate column size percentage
+ */
+@function get-col-percent($column-num) {
+  @return $column-num / $grid-columns * 100%;
+}
+
+/**
+ * Spacing mixin to create uniform margin/padding
+ */
+@mixin spacing($value, $type: margin, $orientation: vertical) {
+  @if $orientation == vertical {
+    #{ $type }-top: $value;
+    #{ $type }-bottom: $value;
+  } @else {
+    #{ $type }-left: $value;
+    #{ $type }-right: $value;
+  }
+}
+
+/**
+ * Row wrapper class, flex box parent.
+ */
+@mixin grid-row($display: flex) {
+  box-sizing: border-box;
+  display: $display;
+  flex-direction: row;
+  flex-wrap: wrap;
+  @include spacing( ( -$grid-gutter ), margin, horizontal );
+}
+
+%col {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 0;
+  flex-shrink: 0;
+  @include spacing( ( $grid-gutter ), padding, horizontal );
+}
+
+%col-flex {
+  @extend %col;
+  flex-grow: 1;
+  flex-basis: 0;
+  max-width: 100%;
+}
+
+@mixin grid-column($columns: 0, $offset: 0) {
+   @if ($columns == 0) {
+     @extend %col-flex;
+   } @else {
+     @extend %col;
+     flex-basis: get-col-percent($columns - $offset);
+     max-width: get-col-percent($columns - $offset);
+   }
+
+   @if ($offset != 0) {
+     margin-left: get-col-percent($offset);
+   }
+}

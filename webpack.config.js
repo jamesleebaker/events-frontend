@@ -24,6 +24,9 @@ module.exports = {
   		}
   	]
   },
+  devServer: {
+    historyApiFallback: true
+  },
   plugins: [
   	new webpack.ProvidePlugin({
   		$: 'jquery',

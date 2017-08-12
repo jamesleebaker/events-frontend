@@ -1,0 +1,12 @@
+#site-nav {
+  @include grid-row();
+
+  .page-title,
+  .menu-items {
+    @include grid-column(8);
+  }
+
+  .menu-items li {
+    display: inline-block;
+  }
+}
