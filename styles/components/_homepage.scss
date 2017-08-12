@@ -43,27 +43,88 @@
     padding-right: 0;
   }
 
-  .time-filters {
-    padding-bottom: 20px;
-  }
+  .homepage-events-list {
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #dfe2e5;
+    position: relative;
+    margin-top: 40px;
 
-  .time-filters li {
-    display: inline-block;
-    border-right: 1px solid #9299a4;
-    padding-right: 7px;
-    padding-left: 3px;
-
-    &:first-of-type {
-      padding-left: 0;
+    .time-filters {
+      position: absolute;
+      top: -38px;
+      left: -1px;
     }
 
-    &:last-of-type {
-      border-right: 0;
-      padding-right: 0;
+    .time-filters li {
+      display: inline-block;
+
+      a {
+        padding: 10px 20px;
+        display: inline-block;
+      }
+
+      a.active {
+        background-color: #fff;
+        border: 1px solid #dfe2e5;
+        border-bottom: 1px solid #fff;
+      }
+    }
+
+    .event {
+      border-bottom: 1px solid #DFE2E5;
+      padding: 10px 0;
+
+      &:last-of-type {
+        border-bottom: 0;
+      }
+
+      @include grid-row();
+
+      .left-details {
+        @include grid-column(10);
+      }
+
+      .right-details {
+        @include grid-column(6);
+        margin-top: 20px;
+        display: inline-block;
+        text-align: right;
+      }
+
+      .date {
+        line-height: 1.6em;
+      }
+
+      .price {
+        color: #37b048;
+        font-weight: bold;
+      }
+
+      .description {
+        padding-top: 10px;
+        font-size: .9em;
+      }
+    }
+
+    .learn-more-button {
+      @include primary-button();
+    }
+
+    .add-to-calendar-button {
+      @include success-button();
     }
   }
 
   .homepage-events-filters {
     @include grid-column(4);
+
+    .header {
+      margin-bottom: 20px;
+    }
+
+    .submit-event-button {
+      @include cta-button();
+    }
   }
 }
