@@ -1,1 +1,1 @@
-require('./search')
+import router from './router';

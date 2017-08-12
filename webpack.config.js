@@ -5,7 +5,7 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: [
-    './app/app.js', 
+    './app/app.js',
   	'./styles/main.scss'
   ],
   output: {
@@ -28,9 +28,6 @@ module.exports = {
   	new webpack.ProvidePlugin({
   		$: 'jquery',
   		jQuery: 'jquery'
-  	}),
-  	new webpack.ProvidePlugin({
-  		algoliasearch: 'algoliasearch'
   	}),
   	new ExtractTextPlugin({
   		filename: 'bundle.css',
