@@ -1,33 +1,11 @@
 <section class="featured-events">
-  <div class="featured-event event-1">
+  {{#each featuredEvents}}
+  <div class="featured-event">
     <h2>
-      <a href="event/23">Event Name</a>
+      <a href="event/id">{{name}}</a>
+      <p class="">{{description}}</p>
+      <p class="date">{{date}}</p>
     </h2>
-    <p class="description">Event Description goes here</p>
-    <p class="date">08/23/2017</p>
   </div>
-
-  <div class="featured-event event-2">
-    <h2>
-      <a href="event/23">Event Name</a>
-    </h2>
-    <p class="description">Event Description goes here</p>
-    <p class="date">08/23/2017</p>
-  </div>
-
-  <div class="featured-event event-3">
-    <h2>
-      <a href="event/23">Event Name</a>
-    </h2>
-    <p class="description">Event Description goes here</p>
-    <p class="date">08/23/2017</p>
-  </div>
-
-  <div class="featured-event event-4">
-    <h2>
-      <a href="event/23">Event Name</a>
-    </h2>
-    <p class="description">Event Description goes here</p>
-    <p class="date">08/23/2017</p>
-  </div>
-</section>
+  {{/each}}
+</section>  
