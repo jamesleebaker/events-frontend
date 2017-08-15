@@ -2,7 +2,7 @@
   {{#each featuredEvents}}
   <div class="featured-event">
     <h2>
-      <a href="event/id">{{name}}</a>
+      <a href="event/{{@index}}/">{{name}} {{@index}}</a>
       <p class="">{{description}}</p>
       <p class="date">{{date}}</p>
     </h2>
