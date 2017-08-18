@@ -10,46 +10,19 @@
       <a href="#">This Week</a>
     </li>
   </ul>
+   <ol>
+     {{#each events}}
+     <li class="event">
+       <div class="left-details">
+         <h4>{{name}}</h4>
+         <p class="date">{{date}}</p>
+         <p class="price">{{price}}</p>
 
-  <ol>
-    <li class="event">
-      <div class="left-details">
-        <h4>Event Name</h4>
-        <p class="date">08/23/2017 @ 7:30pm</p>
-        <p class="price">$25</p>
+         <p class="description">{{description}}</p>
+         
+       </div>
+     </li>
+     {{/each}}
+   </ol>
 
-        <p class="description">Description of the event for something that is occurring soon. You'll go and have fun.</p>
-      </div>
-      <div class="right-details">
-        <button class="learn-more-button" type="button">Learn More</button>
-        <button class="add-to-calendar-button" type="button">Add to Calendar</button>
-      </div>
-    </li>
-    <li class="event">
-      <div class="left-details">
-        <h4>Event Name</h4>
-        <p class="date">08/23/2017 @ 7:30pm</p>
-        <p class="price">$25</p>
-
-        <p class="description">Description of the event for something that is occurring soon. You'll go and have fun.</p>
-      </div>
-      <div class="right-details">
-        <button class="learn-more-button" type="button">Learn More</button>
-        <button class="add-to-calendar-button" type="button">Add to Calendar</button>
-      </div>
-    </li>
-    <li class="event">
-      <div class="left-details">
-        <h4>Event Name</h4>
-        <p class="date">08/23/2017 @ 7:30pm</p>
-        <p class="price">$25</p>
-
-        <p class="description">Description of the event for something that is occurring soon. You'll go and have fun.</p>
-      </div>
-      <div class="right-details">
-        <button class="learn-more-button" type="button">Learn More</button>
-        <button class="add-to-calendar-button" type="button">Add to Calendar</button>
-      </div>
-    </li>
-  </ol>
 </div>
