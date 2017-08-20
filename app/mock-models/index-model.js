@@ -1,10 +1,17 @@
+const today = new Date();
+
+const tomorrow = new Date();
+tomorrow.setDate(today.getDate() + 1);
+
+
+
 const model = {
   events: [{
     name: 'Event Name1',
-    id: 1,
+    eventId: 1,
     featured: true,
     description: 'Event description1',
-    date: new Date(),
+    date: today,
     price: '25.00',
     category: 'Music',
     address: '123 Main Street',
@@ -14,10 +21,10 @@ const model = {
     categories: ['Foo', 'Bar', 'Biz']
   }, {
     name: 'Event Name2',
-    id: 2,
+    eventId: 2,
     featured: true,
     description: 'Event description2',
-    date: (new Date()).setDate((new Date())+1),
+    date: tomorrow,
     price: '25.00',
     category: 'Music',
     address: '123 Main Street',
@@ -28,10 +35,10 @@ const model = {
   },
   {
     name: 'Event Name3',
-    id: 3,
+    eventId: 3,
     featured: false,
     description: 'Event description3',
-    date: '10/23/2017',
+    date: today,
     price: '25.00',
     category: 'Music',
     address: '123 Main Street',
@@ -41,11 +48,11 @@ const model = {
     categories: ['Foo', 'Bar', 'Biz']
   },
   {
-    name: 'Event Name1',
-    id: 4,
+    name: 'Event Name4',
+    eventId: 4,
     featured: false,
-    description: 'Event description1',
-    date: '10/23/2017',
+    description: 'Event description4',
+    date: tomorrow,
     price: '25.00',
     category: 'Music',
     address: '123 Main Street',
@@ -54,11 +61,11 @@ const model = {
     zipCode: '79102',
     categories: ['Foo', 'Bar', 'Biz']
   }, {
-    name: 'Event Name2',
-    id: 5,
+    name: 'Event Name5',
+    eventId: 5,
     featured: true,
-    description: 'Event description2',
-    date: '11/23/2017',
+    description: 'Event description5',
+    date: today,
     price: '2.00',
     category: 'Music',
     address: '123 Main Street',
@@ -69,10 +76,10 @@ const model = {
   },
   {
     name: 'Event Name3',
-    id: 6,
+    eventId: 6,
     featured: false,
     description: 'Event description3',
-    date: '12/23/2017',
+    date: tomorrow,
     price: '5.00',
     category: 'Music',
     address: '123 Main Street',
@@ -80,7 +87,24 @@ const model = {
     state: 'Texas',
     zipCode: '79102',
     categories: ['Foo', 'Bar', 'Biz']
-  }]
-};
+  }],
+  newModel: function() {
+    let newModel = {};
+    newModel.name = 'New Event';
+    newModel.eventId = -1;
+    newModel.featured = false;
+    newModel.description = 'new event';
+    newModel.date = today;
+    newModel.price = '0.00';
+    newModel.category = '';
+    newModel.address = '';
+    newModel.city = 'Amarillo';
+    newModel.state = 'Texas';
+    newModel.zipCode = '';
+    newModel.categories = [];
+    return newModel;
+  },
+  };
 
-export default model;
+
+export {model, today, tomorrow};

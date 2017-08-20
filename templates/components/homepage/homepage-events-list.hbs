@@ -1,23 +1,22 @@
 <div class="homepage-events-list">
   <ul class="time-filters">
     <li>
-      <a href="#" class="active">Today</a>
+      <a href="#?show=today" class={{today}}>Today</a>
     </li>
     <li>
-      <a href="#">Tomorrow</a>
+      <a href="#?show=tomorrow" class={{tomorrow}}>Tomorrow</a>
     </li>
     <li>
-      <a href="#">This Week</a>
+      <a href="#?show=thisweek" class={{thisweek}}>This Week</a>
     </li>
   </ul>
    <ol>
      {{#each events}}
      <li class="event">
        <div class="left-details">
-         <h4>{{name}}</h4>
+         <h4><a href="event/{{eventId}}/">{{name}}</a></h4>
          <p class="date">{{date}}</p>
          <p class="price">{{price}}</p>
-
          <p class="description">{{description}}</p>
          
        </div>
