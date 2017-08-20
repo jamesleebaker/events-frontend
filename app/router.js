@@ -17,7 +17,7 @@ const clearDOM = () => {
 
 const parseQueryString = (queryString) => {
   const query = window.location.search.substring(1);
-  const pairs = query.split('&');
+  const pairs = queryString.split('&');
   const result = {};
 
   for (var i = 0; i < pairs.length; i++) {
@@ -52,9 +52,9 @@ router('/', (context) => {
   });
 });
 
-router('/create-event', (context) => {
+router('/create-event/:action', (context) => {
   const params = {
-    eventId: context.params.eventId,
+    action: context.params.action,
     queryString: parseQueryString(context.querystring)
   };
 
